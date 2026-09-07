@@ -44,7 +44,6 @@ button { color: inherit; }
   align-items: center;
   justify-content: space-between;
   border-bottom: 1px solid rgba(7, 94, 74, .12);
-  position: relative;
   z-index: 20;
 }
 
@@ -72,34 +71,7 @@ button { color: inherit; }
 .brand strong { font-size: 1.03rem; letter-spacing: .04em; }
 .brand small { margin-top: .1rem; color: var(--muted); font-size: .72rem; letter-spacing: .02em; }
 
-.language-button {
-  min-height: 44px;
-  border: 1px solid var(--line);
-  border-radius: 999px;
-  padding: 0 .9rem;
-  display: flex;
-  align-items: center;
-  gap: .55rem;
-  background: rgba(255,255,255,.82);
-  cursor: pointer;
-}
-
-.language-menu {
-  position: absolute;
-  right: 0;
-  top: 72px;
-  width: 170px;
-  padding: .45rem;
-  display: none;
-  border: 1px solid var(--line);
-  border-radius: 16px;
-  background: white;
-  box-shadow: 0 18px 50px rgba(14, 62, 51, .16);
-}
-
-.language-menu.open { display: grid; }
-.language-menu button { border: 0; border-radius: 10px; background: transparent; padding: .7rem .8rem; text-align: left; cursor: pointer; }
-.language-menu button:hover, .language-menu button[aria-selected="true"] { background: var(--mint); color: var(--forest-dark); font-weight: 700; }
+.step-badge { color: var(--forest); font-size: .78rem; font-weight: 800; letter-spacing: .12em; }
 
 main { flex: 1; display: grid; }
 .screen { display: none; animation: reveal .35s ease both; }
@@ -140,6 +112,48 @@ h1 span::after {
 }
 
 .lead { max-width: 31rem; margin: 1.6rem 0; color: var(--muted); font-size: clamp(1.05rem, 2vw, 1.25rem); line-height: 1.75; }
+
+.language-step {
+  margin: 0 0 1.5rem;
+  padding: 0;
+  border: 0;
+}
+
+.language-step legend {
+  width: 100%;
+  margin-bottom: .8rem;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  gap: .7rem;
+  text-align: left;
+}
+
+.language-step legend strong, .language-step legend small { display: block; }
+.language-step legend strong { font-size: 1rem; }
+.language-step legend small { margin-top: .15rem; color: var(--muted); font-size: .76rem; }
+.step-number { width: 36px; height: 36px; flex: none; display: grid; place-items: center; border-radius: 11px; color: white; background: var(--forest); font-size: .8rem; font-weight: 800; }
+.language-options { display: grid; grid-template-columns: repeat(3, 1fr); gap: .65rem; }
+.language-option {
+  min-height: 70px;
+  padding: .65rem;
+  display: flex;
+  align-items: center;
+  gap: .6rem;
+  border: 1px solid var(--line);
+  border-radius: 15px;
+  background: rgba(255,255,255,.82);
+  text-align: left;
+  cursor: pointer;
+  transition: border-color .18s ease, background .18s ease, transform .18s ease;
+}
+.language-option:hover { border-color: var(--forest); transform: translateY(-1px); }
+.language-option[aria-pressed="true"] { border: 2px solid var(--forest); background: var(--mint); box-shadow: 0 7px 18px rgba(7,94,74,.12); }
+.language-code { width: 33px; height: 33px; flex: none; display: grid; place-items: center; border-radius: 10px; color: var(--forest); background: var(--mint); font-size: .76rem; font-weight: 900; }
+.language-option[aria-pressed="true"] .language-code { color: white; background: var(--forest); }
+.language-option strong, .language-option small { display: block; }
+.language-option strong { font-size: .9rem; }
+.language-option small { margin-top: .08rem; color: var(--muted); font-size: .68rem; }
 
 .feature-row { display: flex; gap: clamp(1.2rem, 3vw, 2.6rem); margin-bottom: 2rem; }
 .feature-row span { display: grid; grid-template-columns: auto auto; align-items: baseline; column-gap: .35rem; }
@@ -265,6 +279,9 @@ footer p { display: inline; margin: 0 .3rem; }
   .welcome-copy { text-align: center; }
   h1 { font-size: clamp(3rem, 15vw, 4.4rem); }
   .lead { margin-left: auto; margin-right: auto; }
+  .language-step { padding: 1rem; border: 1px solid var(--line); border-radius: 20px; background: rgba(255,255,255,.72); }
+  .language-options { grid-template-columns: 1fr; }
+  .language-option { min-height: 62px; }
   .feature-row { justify-content: center; }
   .primary-button { width: 100%; }
   .hero-art { order: -1; width: min(78vw, 310px); }

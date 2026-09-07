@@ -84,6 +84,7 @@ const questions = [
 ];
 
 let lang = localStorage.getItem("recycling-language") || "zh";
+let languageSelected = false;
 let current = 0;
 let score = 0;
 let answered = false;
@@ -110,8 +111,7 @@ function applyLanguage(nextLang) {
     const value = copy[lang][el.dataset.i18n];
     if (value) el.innerHTML = value;
   });
-  $("#currentLanguage").textContent = copy[lang].name;
-  $$("[data-lang]").forEach((button) => button.setAttribute("aria-selected", String(button.dataset.lang === lang)));
+  $$("[data-lang]").forEach((button) => button.setAttribute("aria-pressed", String(languageSelected && button.dataset.lang === lang)));
   $("#backButton").setAttribute("aria-label", copy[lang].back);
   updateSource();
   if ($("#quizScreen").classList.contains("active")) renderQuestion();
@@ -126,6 +126,7 @@ function updateSource() {
 function renderQuestion() {
   answered = false;
   const data = questions[current][lang];
+  $("#stepBadge").textContent = `STEP ${String(current + 2).padStart(2, "0")} / 04`;
   $("#questionVisual").textContent = questions[current].icon;
   $("#questionNumber").textContent = `QUESTION ${String(current + 1).padStart(2, "0")}`;
   $("#questionText").textContent = data.q;
@@ -170,6 +171,7 @@ function startQuiz() {
 }
 
 function finishQuiz() {
+  $("#stepBadge").textContent = "COMPLETE";
   $("#finalScore").textContent = score;
   const source = new URLSearchParams(location.search).get("source");
   const url = new URL(CONFIG.lineLotteryUrl, location.href);
@@ -178,28 +180,20 @@ function finishQuiz() {
   showScreen("resultScreen");
 }
 
-$("#languageButton").addEventListener("click", () => {
-  const menu = $("#languageMenu");
-  const open = menu.classList.toggle("open");
-  $("#languageButton").setAttribute("aria-expanded", String(open));
-});
-
 $$("[data-lang]").forEach((button) => button.addEventListener("click", () => {
+  languageSelected = true;
   applyLanguage(button.dataset.lang);
-  $("#languageMenu").classList.remove("open");
-  $("#languageButton").setAttribute("aria-expanded", "false");
+  $("#startButton").disabled = false;
 }));
 
-document.addEventListener("click", (event) => {
-  if (!event.target.closest(".topbar")) {
-    $("#languageMenu").classList.remove("open");
-    $("#languageButton").setAttribute("aria-expanded", "false");
-  }
-});
-
 $("#startButton").addEventListener("click", startQuiz);
-$("#restartButton").addEventListener("click", startQuiz);
-$("#backButton").addEventListener("click", () => showScreen("welcomeScreen"));
+function returnToLanguageStep() {
+  $("#stepBadge").textContent = "STEP 01 / 04";
+  showScreen("welcomeScreen");
+}
+
+$("#restartButton").addEventListener("click", returnToLanguageStep);
+$("#backButton").addEventListener("click", returnToLanguageStep);
 $("#nextButton").addEventListener("click", () => {
   if (!answered) return;
   if (current < questions.length - 1) {

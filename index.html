@@ -21,16 +21,7 @@
             <small>Hsinchu County Recycling</small>
           </span>
         </a>
-        <button class="language-button" id="languageButton" type="button" aria-haspopup="listbox" aria-expanded="false">
-          <span aria-hidden="true">🌐</span>
-          <span id="currentLanguage">中文</span>
-          <span aria-hidden="true">⌄</span>
-        </button>
-        <div class="language-menu" id="languageMenu" role="listbox" aria-label="Language">
-          <button type="button" role="option" data-lang="zh" aria-selected="true">中文</button>
-          <button type="button" role="option" data-lang="en" aria-selected="false">English</button>
-          <button type="button" role="option" data-lang="vi" aria-selected="false">Tiếng Việt</button>
-        </div>
+        <span class="step-badge" id="stepBadge">STEP 01 / 04</span>
       </header>
 
       <main>
@@ -39,12 +30,32 @@
             <p class="eyebrow" data-i18n="eyebrow">1分鐘認識正確回收方式</p>
             <h1 id="welcomeTitle" data-i18n="title">多語智慧<br /><span>回收挑戰</span></h1>
             <p class="lead" data-i18n="lead">完成 3 道生活情境題，看看你有多懂資源回收！</p>
+            <fieldset class="language-step">
+              <legend>
+                <span class="step-number">01</span>
+                <span>
+                  <strong>請選擇使用語言</strong>
+                  <small>Choose your language · Chọn ngôn ngữ</small>
+                </span>
+              </legend>
+              <div class="language-options">
+                <button class="language-option" type="button" data-lang="zh" aria-pressed="false">
+                  <span class="language-code">中</span><span><strong>中文</strong><small>繁體中文</small></span>
+                </button>
+                <button class="language-option" type="button" data-lang="en" aria-pressed="false">
+                  <span class="language-code">EN</span><span><strong>English</strong><small>English</small></span>
+                </button>
+                <button class="language-option" type="button" data-lang="vi" aria-pressed="false">
+                  <span class="language-code">VI</span><span><strong>Tiếng Việt</strong><small>Việt ngữ</small></span>
+                </button>
+              </div>
+            </fieldset>
             <div class="feature-row" aria-label="活動特色">
               <span><b>3</b><em data-i18n="questions">道題目</em></span>
               <span><b>3</b><em data-i18n="languages">種語言</em></span>
               <span><b>1</b><em data-i18n="minute">分鐘完成</em></span>
             </div>
-            <button class="primary-button" id="startButton" type="button">
+            <button class="primary-button" id="startButton" type="button" disabled>
               <span data-i18n="start">開始挑戰</span><span aria-hidden="true">→</span>
             </button>
             <p class="helper" data-i18n="helper">完成後即可前往 LINE 參加抽獎</p>
