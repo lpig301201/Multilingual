@@ -9,7 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;800&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="styles-v7.css" />
+    <link rel="stylesheet" href="styles-v8.css" />
   </head>
   <body>
     <div class="page-shell">
@@ -85,6 +85,7 @@
                 <li data-i18n="lineInstruction2">完成後回到這個活動頁面</li>
                 <li data-i18n="lineInstruction3">依每題提示輸入品項，再選出答案</li>
               </ol>
+              <p class="threshold-note"><span aria-hidden="true">✓</span><span data-i18n="thresholdNote">首次答對4題以上即可完成；未達門檻只需訂正答錯題目。</span></p>
               <a class="line-button official-line-button" id="officialLineButton" href="https://lin.ee/lOAwxR9" target="_blank" rel="noopener">
                 <span class="line-logo" aria-hidden="true">LINE</span>
                 <span data-i18n="openOfficialLine">開啟凍好查LINE</span>
@@ -136,6 +137,20 @@
           </article>
         </section>
 
+        <section class="screen" id="correctionScreen" aria-labelledby="correctionTitle">
+          <div class="correction-card">
+            <div class="correction-icon" aria-hidden="true">↻</div>
+            <p class="eyebrow" data-i18n="correctionEyebrow">再查一次就完成</p>
+            <h2 id="correctionTitle" data-i18n="correctionTitle">還差一點點，完成訂正後即可參加抽獎！</h2>
+            <p class="correction-score"><span data-i18n="firstScore">首次作答</span><strong id="correctionScore">0 / 5</strong></p>
+            <p class="correction-copy" data-i18n="correctionCopy">請再次使用「竹縣回收凍好查」查詢下列品項，只需重新挑戰答錯的題目。</p>
+            <div class="wrong-items" id="wrongItems"></div>
+            <button class="primary-button correction-button" id="correctionButton" type="button">
+              <span data-i18n="startCorrection">開始訂正答錯題目</span><span aria-hidden="true">→</span>
+            </button>
+          </div>
+        </section>
+
         <section class="screen" id="resultScreen" aria-labelledby="resultTitle">
           <div class="result-card">
             <div class="confetti" aria-hidden="true">✦　●　✧</div>
@@ -168,6 +183,6 @@
         <p class="source-label" id="sourceLabel"></p>
       </footer>
     </div>
-    <script src="app-v7.js"></script>
+    <script src="app-v8.js"></script>
   </body>
 </html>
