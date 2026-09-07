@@ -4,7 +4,7 @@
 
 ## 上線前必改
 
-開啟 `app-v5.js`，把最上方的：
+開啟 `app-v6.js`，把最上方的：
 
 ```js
 lineLotteryUrl: "https://line.me/",
@@ -33,8 +33,8 @@ LINE官方帳號按鈕已設定為環保局公開連結 `https://lin.ee/lOAwxR9`
 
 ## 修改文字或題目
 
-- 三語介面文字：`app-v5.js` 的 `copy`
-- 三語題目與解析：`app-v5.js` 的 `questions`
-- 合作單位名稱與代碼：`app-v5.js` 的 `sources`
+- 三語介面文字：`app-v6.js` 的 `copy`
+- 三語題目與解析：`app-v6.js` 的 `questions`
+- 合作單位名稱與代碼：`app-v6.js` 的 `sources`
 
 本網站為純靜態網頁，不蒐集姓名、電話或 LINE 個資；作答分數只存在當次瀏覽頁面中。
