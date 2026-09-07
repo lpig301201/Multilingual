@@ -21,15 +21,15 @@
             <small>Hsinchu County Recycling</small>
           </span>
         </a>
-        <span class="step-badge" id="stepBadge">STEP 01 / 04</span>
+        <span class="step-badge" id="stepBadge">STEP 01 / 05</span>
       </header>
 
       <main>
         <section class="screen active" id="welcomeScreen" aria-labelledby="welcomeTitle">
           <div class="welcome-copy">
-            <p class="eyebrow" data-i18n="eyebrow">1分鐘認識正確回收方式</p>
+            <p class="eyebrow" data-i18n="eyebrow">用AI查詢完成回收任務</p>
             <h1 id="welcomeTitle" data-i18n="title">多語智慧<br /><span>回收挑戰</span></h1>
-            <p class="lead" data-i18n="lead">完成 3 道生活情境題，看看你有多懂資源回收！</p>
+            <p class="lead" data-i18n="lead">先用凍好查尋找答案，再完成3道生活回收任務！</p>
             <fieldset class="language-step">
               <legend>
                 <span class="step-number">01</span>
@@ -53,12 +53,12 @@
             <div class="feature-row" aria-label="活動特色">
               <span><b>3</b><em data-i18n="questions">道題目</em></span>
               <span><b>3</b><em data-i18n="languages">種語言</em></span>
-              <span><b>1</b><em data-i18n="minute">分鐘完成</em></span>
+              <span><b>3</b><em data-i18n="minute">分鐘完成</em></span>
             </div>
             <button class="primary-button" id="startButton" type="button" disabled>
-              <span data-i18n="start">開始挑戰</span><span aria-hidden="true">→</span>
+              <span data-i18n="start">下一步：開啟凍好查</span><span aria-hidden="true">→</span>
             </button>
-            <p class="helper" data-i18n="helper">完成後即可前往 LINE 參加抽獎</p>
+            <p class="helper" data-i18n="helper">先準備好LINE查詢工具，再開始尋找答案</p>
           </div>
 
           <div class="hero-art" aria-hidden="true">
@@ -69,6 +69,35 @@
             <div class="item item-battery">🔋</div>
             <div class="item item-box">📦</div>
             <div class="item item-cup">🥤</div>
+          </div>
+        </section>
+
+        <section class="screen" id="lineScreen" aria-labelledby="lineStepTitle">
+          <div class="line-setup-card">
+            <button class="back-button line-back" id="lineBackButton" type="button" aria-label="返回">←</button>
+            <div class="line-setup-copy">
+              <p class="eyebrow" data-i18n="lineEyebrow">第2步｜準備查詢工具</p>
+              <h2 id="lineStepTitle" data-i18n="lineTitle">先加入或開啟<br />「竹縣回收凍好查」</h2>
+              <p data-i18n="lineIntro">接下來的3道題目，請使用凍好查的AI智慧查詢尋找答案。</p>
+              <ol class="line-instructions">
+                <li data-i18n="lineInstruction1">點擊下方按鈕，加入或開啟LINE官方帳號</li>
+                <li data-i18n="lineInstruction2">完成後回到這個活動頁面</li>
+                <li data-i18n="lineInstruction3">依每題提示輸入品項，再選出答案</li>
+              </ol>
+              <a class="line-button official-line-button" id="officialLineButton" href="https://lin.ee/lOAwxR9" target="_blank" rel="noopener">
+                <span class="line-logo" aria-hidden="true">LINE</span>
+                <span data-i18n="openOfficialLine">開啟凍好查LINE</span>
+              </a>
+              <button class="primary-button ready-button" id="readyButton" type="button">
+                <span data-i18n="ready">我已準備好，開始找答案</span><span aria-hidden="true">→</span>
+              </button>
+              <p class="return-tip" data-i18n="returnTip">開啟LINE後，請使用手機的「返回」功能回到本頁。</p>
+            </div>
+            <aside class="qr-panel">
+              <img src="line-qr.jpg" alt="竹縣回收凍好查LINE官方帳號QR Code" />
+              <strong data-i18n="qrTitle">使用其他裝置？</strong>
+              <p data-i18n="qrCopy">可開啟LINE掃描此QR Code加入好友</p>
+            </aside>
           </div>
         </section>
 
@@ -87,6 +116,14 @@
           </div>
 
           <article class="question-card">
+            <div class="lookup-task">
+              <span class="lookup-icon" aria-hidden="true">AI</span>
+              <div>
+                <strong data-i18n="lookupLabel">先用凍好查找答案</strong>
+                <p id="lookupInstruction"></p>
+              </div>
+              <a class="lookup-button" href="https://lin.ee/lOAwxR9" target="_blank" rel="noopener" data-i18n="openLookup">開啟LINE查詢</a>
+            </div>
             <div class="question-visual" id="questionVisual" aria-hidden="true">🧴</div>
             <p class="question-number" id="questionNumber">QUESTION 01</p>
             <h2 id="questionText"></h2>
