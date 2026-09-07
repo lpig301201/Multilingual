@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <meta name="theme-color" content="#086a52" />
+    <meta name="description" content="竹縣回收凍好查｜多語智慧回收挑戰" />
+    <title>多語智慧回收挑戰｜竹縣回收凍好查</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="topbar">
+        <a class="brand" href="#" aria-label="回到活動首頁">
+          <span class="brand-mark" aria-hidden="true">♻</span>
+          <span>
+            <strong data-i18n="brand">竹縣回收凍好查</strong>
+            <small>Hsinchu County Recycling</small>
+          </span>
+        </a>
+        <button class="language-button" id="languageButton" type="button" aria-haspopup="listbox" aria-expanded="false">
+          <span aria-hidden="true">🌐</span>
+          <span id="currentLanguage">中文</span>
+          <span aria-hidden="true">⌄</span>
+        </button>
+        <div class="language-menu" id="languageMenu" role="listbox" aria-label="Language">
+          <button type="button" role="option" data-lang="zh" aria-selected="true">中文</button>
+          <button type="button" role="option" data-lang="en" aria-selected="false">English</button>
+          <button type="button" role="option" data-lang="vi" aria-selected="false">Tiếng Việt</button>
+        </div>
+      </header>
+
+      <main>
+        <section class="screen active" id="welcomeScreen" aria-labelledby="welcomeTitle">
+          <div class="welcome-copy">
+            <p class="eyebrow" data-i18n="eyebrow">1分鐘認識正確回收方式</p>
+            <h1 id="welcomeTitle" data-i18n="title">多語智慧<br /><span>回收挑戰</span></h1>
+            <p class="lead" data-i18n="lead">完成 3 道生活情境題，看看你有多懂資源回收！</p>
+            <div class="feature-row" aria-label="活動特色">
+              <span><b>3</b><em data-i18n="questions">道題目</em></span>
+              <span><b>3</b><em data-i18n="languages">種語言</em></span>
+              <span><b>1</b><em data-i18n="minute">分鐘完成</em></span>
+            </div>
+            <button class="primary-button" id="startButton" type="button">
+              <span data-i18n="start">開始挑戰</span><span aria-hidden="true">→</span>
+            </button>
+            <p class="helper" data-i18n="helper">完成後即可前往 LINE 參加抽獎</p>
+          </div>
+
+          <div class="hero-art" aria-hidden="true">
+            <div class="orbit orbit-one"></div>
+            <div class="orbit orbit-two"></div>
+            <div class="recycle-disc"><span>♻</span></div>
+            <div class="item item-bottle">🧴</div>
+            <div class="item item-battery">🔋</div>
+            <div class="item item-box">📦</div>
+            <div class="item item-cup">🥤</div>
+          </div>
+        </section>
+
+        <section class="screen" id="quizScreen" aria-labelledby="questionText">
+          <div class="quiz-header">
+            <button class="back-button" id="backButton" type="button" aria-label="返回">←</button>
+            <div class="progress-wrap">
+              <div class="progress-meta">
+                <span id="progressLabel">第 1 題／共 3 題</span>
+                <span id="scoreLabel">0 分</span>
+              </div>
+              <div class="progress-track" role="progressbar" aria-valuemin="0" aria-valuemax="3" aria-valuenow="1">
+                <span id="progressBar"></span>
+              </div>
+            </div>
+          </div>
+
+          <article class="question-card">
+            <div class="question-visual" id="questionVisual" aria-hidden="true">🧴</div>
+            <p class="question-number" id="questionNumber">QUESTION 01</p>
+            <h2 id="questionText"></h2>
+            <div class="answers" id="answers"></div>
+            <div class="feedback" id="feedback" aria-live="polite"></div>
+            <button class="primary-button next-button" id="nextButton" type="button" disabled>
+              <span data-i18n="next">下一題</span><span aria-hidden="true">→</span>
+            </button>
+          </article>
+        </section>
+
+        <section class="screen" id="resultScreen" aria-labelledby="resultTitle">
+          <div class="result-card">
+            <div class="confetti" aria-hidden="true">✦　●　✧</div>
+            <div class="result-icon" aria-hidden="true">✓</div>
+            <p class="eyebrow" data-i18n="completeEyebrow">挑戰完成</p>
+            <h2 id="resultTitle" data-i18n="completeTitle">你完成了多語智慧回收挑戰！</h2>
+            <p class="result-score"><strong id="finalScore">3</strong><span> / 3</span></p>
+            <p class="result-copy" data-i18n="completeCopy">現在前往「竹縣回收凍好查」LINE 官方帳號，加入或開啟好友即可取得抽獎資格。</p>
+            <a class="line-button" id="lineButton" href="#" rel="noopener">
+              <span class="line-logo" aria-hidden="true">LINE</span>
+              <span data-i18n="goLine">前往 LINE 參加抽獎</span>
+            </a>
+            <p class="notice" data-i18n="notice">每一 LINE 帳號限取得抽獎資格 1 次；獎品數量有限，送完為止。</p>
+            <button class="text-button" id="restartButton" type="button" data-i18n="restart">再挑戰一次</button>
+          </div>
+
+          <aside class="service-card">
+            <div class="service-icon" aria-hidden="true">AI</div>
+            <div>
+              <h3 data-i18n="serviceTitle">還有回收問題嗎？</h3>
+              <p data-i18n="serviceCopy">進入凍好查後，直接輸入想查詢的品項，AI 會快速回覆分類與處理方式。</p>
+            </div>
+          </aside>
+        </section>
+      </main>
+
+      <footer>
+        <p data-i18n="sponsor">環境部資源循環署補助</p>
+        <p data-i18n="advertiser">新竹縣政府環境保護局廣告</p>
+        <p class="source-label" id="sourceLabel"></p>
+      </footer>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>
