@@ -4,7 +4,7 @@
 
 ## 上線前必改
 
-開啟 `app-v8.js`，把最上方的：
+開啟 `app-v9.js`，把最上方的：
 
 ```js
 lineLotteryUrl: "https://line.me/",
@@ -16,7 +16,7 @@ LINE官方帳號按鈕已設定為環保局公開連結 `https://lin.ee/lOAwxR9`
 
 ## GitHub Pages 部署
 
-1. 將 `dist` 內的 `index.html`、`styles.css`、`app.js` 放在 GitHub repository 根目錄。
+1. 將 `dist` 內的 `index.html`、`styles-v9.css`、`app-v9.js`、`line-qr.jpg`及`donghaocha-mascot.png`放在 GitHub repository 根目錄。
 2. 到 repository 的 **Settings → Pages**。
 3. Source 選擇 **Deploy from a branch**，再選 `main` 與 `/ (root)`。
 4. 儲存後等待 GitHub 產生活動網址。
@@ -33,9 +33,9 @@ LINE官方帳號按鈕已設定為環保局公開連結 `https://lin.ee/lOAwxR9`
 
 ## 修改文字或題目
 
-- 三語介面文字：`app-v8.js` 的 `copy`
-- 三語題目與解析：`app-v8.js` 的 `questions`
-- 合作單位名稱與代碼：`app-v8.js` 的 `sources`
+- 三語介面文字：`app-v9.js` 的 `copy`
+- 三語題目與解析：`app-v9.js` 的 `questions`
+- 合作單位名稱與代碼：`app-v9.js` 的 `sources`
 
 ## 通過門檻
 
