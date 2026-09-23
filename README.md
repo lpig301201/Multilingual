@@ -1,10 +1,10 @@
 # 多語智慧回收挑戰
 
-「竹縣回收凍好查」中、英、越文線上互動活動。使用者先選擇語言，接著加入或開啟LINE官方帳號，再使用AI智慧查詢尋找五道題目的答案，最後導引至抽獎活動。
+「竹縣回收凍好查」英文、越南文線上互動活動。使用者先選擇語言，接著加入或開啟LINE官方帳號，再使用AI智慧查詢尋找五道題目的答案，最後導引至抽獎活動。
 
 ## 上線前必改
 
-開啟 `app-v9.js`，把最上方的：
+開啟 `app-v10.js`，把最上方的：
 
 ```js
 lineLotteryUrl: "https://line.me/",
@@ -16,7 +16,7 @@ LINE官方帳號按鈕已設定為環保局公開連結 `https://lin.ee/lOAwxR9`
 
 ## GitHub Pages 部署
 
-1. 將 `dist` 內的 `index.html`、`styles-v9.css`、`app-v9.js`、`line-qr.jpg`及`donghaocha-mascot.png`放在 GitHub repository 根目錄。
+1. 將 `dist` 內的 `index.html`、`styles-v10.css`、`app-v10.js`、`line-qr.jpg`及`donghaocha-mascot.png`放在 GitHub repository 根目錄。
 2. 到 repository 的 **Settings → Pages**。
 3. Source 選擇 **Deploy from a branch**，再選 `main` 與 `/ (root)`。
 4. 儲存後等待 GitHub 產生活動網址。
@@ -33,9 +33,9 @@ LINE官方帳號按鈕已設定為環保局公開連結 `https://lin.ee/lOAwxR9`
 
 ## 修改文字或題目
 
-- 三語介面文字：`app-v9.js` 的 `copy`
-- 三語題目與解析：`app-v9.js` 的 `questions`
-- 合作單位名稱與代碼：`app-v9.js` 的 `sources`
+- 英、越雙語介面文字：`app-v10.js` 的 `copy`
+- 英、越雙語題目與解析：`app-v10.js` 的 `questions`
+- 合作單位名稱與代碼：`app-v10.js` 的 `sources`
 
 ## 通過門檻
 

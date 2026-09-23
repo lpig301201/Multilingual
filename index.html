@@ -1,23 +1,23 @@
 <!doctype html>
-<html lang="zh-Hant">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
     <meta name="theme-color" content="#086a52" />
-    <meta name="description" content="竹縣回收凍好查｜多語智慧回收挑戰" />
-    <title>多語智慧回收挑戰｜竹縣回收凍好查</title>
+    <meta name="description" content="Hsinchu Recycling Guide | Smart Multilingual Recycling Challenge" />
+    <title>Smart Multilingual Recycling Challenge</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;800&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="styles-v9.css" />
+    <link rel="stylesheet" href="styles-v10.css" />
   </head>
   <body>
     <div class="page-shell">
       <header class="topbar">
-        <a class="brand" href="#" aria-label="回到活動首頁">
+        <a class="brand" href="#" aria-label="Return to the activity home page">
           <span class="brand-mark" aria-hidden="true">♻</span>
           <span>
-            <strong data-i18n="brand">竹縣回收凍好查</strong>
+            <strong data-i18n="brand">Hsinchu Recycling Guide</strong>
             <small>Hsinchu County Recycling</small>
           </span>
         </a>
@@ -27,21 +27,18 @@
       <main>
         <section class="screen active" id="welcomeScreen" aria-labelledby="welcomeTitle">
           <div class="welcome-copy">
-            <p class="eyebrow" data-i18n="eyebrow">用AI查詢完成回收任務</p>
-            <h1 id="welcomeTitle" data-i18n="title">多語智慧<br /><span>回收挑戰</span></h1>
-            <p class="lead" data-i18n="lead">先用凍好查尋找答案，再完成5道生活回收任務！</p>
+            <p class="eyebrow" data-i18n="eyebrow">Use AI search to complete each task</p>
+            <h1 id="welcomeTitle" data-i18n="title">Smart Multilingual<br /><span>Recycling Challenge</span></h1>
+            <p class="lead" data-i18n="lead">Find each answer with the Recycling Guide, then complete 5 everyday recycling tasks!</p>
             <fieldset class="language-step">
               <legend>
                 <span class="step-number">01</span>
                 <span>
-                  <strong>請選擇使用語言</strong>
-                  <small>Choose your language · Chọn ngôn ngữ</small>
+                  <strong>Choose your language</strong>
+                  <small>Chọn ngôn ngữ</small>
                 </span>
               </legend>
               <div class="language-options">
-                <button class="language-option" type="button" data-lang="zh" aria-pressed="false">
-                  <span class="language-code">中</span><span><strong>中文</strong><small>繁體中文</small></span>
-                </button>
                 <button class="language-option" type="button" data-lang="en" aria-pressed="false">
                   <span class="language-code">EN</span><span><strong>English</strong><small>English</small></span>
                 </button>
@@ -50,15 +47,15 @@
                 </button>
               </div>
             </fieldset>
-            <div class="feature-row" aria-label="活動特色">
-              <span><b>5</b><em data-i18n="questions">道題目</em></span>
-              <span><b>3</b><em data-i18n="languages">種語言</em></span>
-              <span><b>5</b><em data-i18n="minute">分鐘完成</em></span>
+            <div class="feature-row" aria-label="Activity features">
+              <span><b>5</b><em data-i18n="questions">questions</em></span>
+              <span><b>2</b><em data-i18n="languages">languages</em></span>
+              <span><b>5</b><em data-i18n="minute">minutes</em></span>
             </div>
             <button class="primary-button" id="startButton" type="button" disabled>
-              <span data-i18n="start">下一步：開啟凍好查</span><span aria-hidden="true">→</span>
+              <span data-i18n="start">Next: open Recycling Guide</span><span aria-hidden="true">→</span>
             </button>
-            <p class="helper" data-i18n="helper">先準備好LINE查詢工具，再開始尋找答案</p>
+            <p class="helper" data-i18n="helper">Prepare the LINE search tool before finding the answers</p>
           </div>
 
           <div class="hero-art" aria-hidden="true">
@@ -75,41 +72,41 @@
 
         <section class="screen" id="lineScreen" aria-labelledby="lineStepTitle">
           <div class="line-setup-card">
-            <button class="back-button line-back" id="lineBackButton" type="button" aria-label="返回">←</button>
+            <button class="back-button line-back" id="lineBackButton" type="button" aria-label="Back">←</button>
             <div class="line-setup-copy">
-              <p class="eyebrow" data-i18n="lineEyebrow">第2步｜準備查詢工具</p>
-              <h2 id="lineStepTitle" data-i18n="lineTitle">先加入或開啟<br />「竹縣回收凍好查」</h2>
-              <p data-i18n="lineIntro">接下來的5道題目，請使用凍好查的AI智慧查詢尋找答案。</p>
+              <p class="eyebrow" data-i18n="lineEyebrow">Step 2 | Prepare your search tool</p>
+              <h2 id="lineStepTitle" data-i18n="lineTitle">Add or open the<br />Hsinchu Recycling Guide</h2>
+              <p data-i18n="lineIntro">Use the AI search in the Recycling Guide to find the answers to the next 5 questions.</p>
               <ol class="line-instructions">
-                <li data-i18n="lineInstruction1">點擊下方按鈕，加入或開啟LINE官方帳號</li>
-                <li data-i18n="lineInstruction2">完成後回到這個活動頁面</li>
-                <li data-i18n="lineInstruction3">依每題提示輸入品項，再選出答案</li>
+                <li data-i18n="lineInstruction1">Tap the button below to add or open the LINE Official Account</li>
+                <li data-i18n="lineInstruction2">Return to this activity page</li>
+                <li data-i18n="lineInstruction3">Enter the item shown in each task, then choose your answer</li>
               </ol>
-              <p class="threshold-note"><span aria-hidden="true">✓</span><span data-i18n="thresholdNote">首次答對4題以上即可完成；未達門檻只需訂正答錯題目。</span></p>
+              <p class="threshold-note"><span aria-hidden="true">✓</span><span data-i18n="thresholdNote">Get at least 4 of 5 correct on your first try. Otherwise, correct only the questions you missed.</span></p>
               <a class="line-button official-line-button" id="officialLineButton" href="https://lin.ee/lOAwxR9" target="_blank" rel="noopener">
                 <span class="line-logo" aria-hidden="true">LINE</span>
-                <span data-i18n="openOfficialLine">開啟凍好查LINE</span>
+                <span data-i18n="openOfficialLine">Open Recycling Guide on LINE</span>
               </a>
               <button class="primary-button ready-button" id="readyButton" type="button">
-                <span data-i18n="ready">我已準備好，開始找答案</span><span aria-hidden="true">→</span>
+                <span data-i18n="ready">I'm ready—find the answers</span><span aria-hidden="true">→</span>
               </button>
-              <p class="return-tip" data-i18n="returnTip">開啟LINE後，請使用手機的「返回」功能回到本頁。</p>
+              <p class="return-tip" data-i18n="returnTip">After opening LINE, use your phone's Back function to return here.</p>
             </div>
             <aside class="qr-panel">
-              <img src="line-qr.jpg" alt="竹縣回收凍好查LINE官方帳號QR Code" />
-              <strong data-i18n="qrTitle">使用其他裝置？</strong>
-              <p data-i18n="qrCopy">可開啟LINE掃描此QR Code加入好友</p>
+              <img src="line-qr.jpg" alt="Hsinchu Recycling Guide LINE Official Account QR Code" />
+              <strong data-i18n="qrTitle">Using another device?</strong>
+              <p data-i18n="qrCopy">Scan this QR Code with LINE to add the account</p>
             </aside>
           </div>
         </section>
 
         <section class="screen" id="quizScreen" aria-labelledby="questionText">
           <div class="quiz-header">
-            <button class="back-button" id="backButton" type="button" aria-label="返回">←</button>
+            <button class="back-button" id="backButton" type="button" aria-label="Back">←</button>
             <div class="progress-wrap">
               <div class="progress-meta">
-                <span id="progressLabel">第 1 題／共 5 題</span>
-                <span id="scoreLabel">0 分</span>
+                <span id="progressLabel">Question 1 of 5</span>
+                <span id="scoreLabel">0 pts</span>
               </div>
               <div class="progress-track" role="progressbar" aria-valuemin="0" aria-valuemax="5" aria-valuenow="1">
                 <span id="progressBar"></span>
@@ -121,10 +118,10 @@
             <div class="lookup-task">
               <span class="lookup-icon" aria-hidden="true">AI</span>
               <div>
-                <strong data-i18n="lookupLabel">先用凍好查找答案</strong>
+                <strong data-i18n="lookupLabel">Find the answer first</strong>
                 <p id="lookupInstruction"></p>
               </div>
-              <a class="lookup-button" href="https://lin.ee/lOAwxR9" target="_blank" rel="noopener" data-i18n="openLookup">開啟LINE查詢</a>
+              <a class="lookup-button" href="https://lin.ee/lOAwxR9" target="_blank" rel="noopener" data-i18n="openLookup">Open LINE search</a>
             </div>
             <div class="question-visual" id="questionVisual" aria-hidden="true">🧴</div>
             <p class="question-number" id="questionNumber">QUESTION 01</p>
@@ -132,7 +129,7 @@
             <div class="answers" id="answers"></div>
             <div class="feedback" id="feedback" aria-live="polite"></div>
             <button class="primary-button next-button" id="nextButton" type="button" disabled>
-              <span data-i18n="next">下一題</span><span aria-hidden="true">→</span>
+              <span data-i18n="next">Next question</span><span aria-hidden="true">→</span>
             </button>
           </article>
         </section>
@@ -140,13 +137,13 @@
         <section class="screen" id="correctionScreen" aria-labelledby="correctionTitle">
           <div class="correction-card">
             <div class="correction-icon" aria-hidden="true">↻</div>
-            <p class="eyebrow" data-i18n="correctionEyebrow">再查一次就完成</p>
-            <h2 id="correctionTitle" data-i18n="correctionTitle">還差一點點，完成訂正後即可參加抽獎！</h2>
-            <p class="correction-score"><span data-i18n="firstScore">首次作答</span><strong id="correctionScore">0 / 5</strong></p>
-            <p class="correction-copy" data-i18n="correctionCopy">請再次使用「竹縣回收凍好查」查詢下列品項，只需重新挑戰答錯的題目。</p>
+            <p class="eyebrow" data-i18n="correctionEyebrow">One more search</p>
+            <h2 id="correctionTitle" data-i18n="correctionTitle">Almost there! Correct the missed questions to enter the prize draw.</h2>
+            <p class="correction-score"><span data-i18n="firstScore">First attempt</span><strong id="correctionScore">0 / 5</strong></p>
+            <p class="correction-copy" data-i18n="correctionCopy">Use the Hsinchu Recycling Guide to look up the items below. You only need to retry the questions you missed.</p>
             <div class="wrong-items" id="wrongItems"></div>
             <button class="primary-button correction-button" id="correctionButton" type="button">
-              <span data-i18n="startCorrection">開始訂正答錯題目</span><span aria-hidden="true">→</span>
+              <span data-i18n="startCorrection">Correct missed questions</span><span aria-hidden="true">→</span>
             </button>
           </div>
         </section>
@@ -155,34 +152,34 @@
           <div class="result-card">
             <div class="confetti" aria-hidden="true">✦　●　✧</div>
             <div class="result-icon" aria-hidden="true">✓</div>
-            <p class="eyebrow" data-i18n="completeEyebrow">挑戰完成</p>
-            <h2 id="resultTitle" data-i18n="completeTitle">你完成了多語智慧回收挑戰！</h2>
+            <p class="eyebrow" data-i18n="completeEyebrow">Challenge complete</p>
+            <h2 id="resultTitle" data-i18n="completeTitle">You completed the Smart Multilingual Recycling Challenge!</h2>
             <p class="result-score"><strong id="finalScore">5</strong><span> / 5</span></p>
-            <p class="result-copy" data-i18n="completeCopy">點擊下方按鈕返回LINE，即可取得抽獎資格並參加線上抽獎。</p>
+            <p class="result-copy" data-i18n="completeCopy">Tap the button below to return to LINE, receive your entry, and join the online prize draw.</p>
             <a class="line-button" id="lineButton" href="#" rel="noopener">
               <span class="line-logo" aria-hidden="true">LINE</span>
-              <span data-i18n="goLine">前往 LINE 參加抽獎</span>
+              <span data-i18n="goLine">Enter the draw on LINE</span>
             </a>
-            <p class="notice" data-i18n="notice">每一 LINE 帳號限取得抽獎資格 1 次；獎品數量有限，送完為止。</p>
-            <button class="text-button" id="restartButton" type="button" data-i18n="restart">再挑戰一次</button>
+            <p class="notice" data-i18n="notice">Each LINE account may receive one entry only. Prizes are limited and available while supplies last.</p>
+            <button class="text-button" id="restartButton" type="button" data-i18n="restart">Try again</button>
           </div>
 
           <aside class="service-card">
             <div class="service-icon" aria-hidden="true">AI</div>
             <div>
-              <h3 data-i18n="serviceTitle">還有回收問題嗎？</h3>
-              <p data-i18n="serviceCopy">進入凍好查後，直接輸入想查詢的品項，AI 會快速回覆分類與處理方式。</p>
+              <h3 data-i18n="serviceTitle">Still have a recycling question?</h3>
+              <p data-i18n="serviceCopy">Type the item in the Recycling Guide. AI will quickly tell you how to sort and dispose of it.</p>
             </div>
           </aside>
         </section>
       </main>
 
       <footer>
-        <p data-i18n="sponsor">環境部資源循環署補助</p>
-        <p data-i18n="advertiser">新竹縣政府環境保護局廣告</p>
+        <p data-i18n="sponsor">Subsidized by Resource Circulation Administration, MOENV</p>
+        <p data-i18n="advertiser">Advertisement by Hsinchu County EPB</p>
         <p class="source-label" id="sourceLabel"></p>
       </footer>
     </div>
-    <script src="app-v9.js"></script>
+    <script src="app-v10.js"></script>
   </body>
 </html>
