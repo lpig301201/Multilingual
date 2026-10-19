@@ -1,7 +1,7 @@
 const CONFIG = {
   lineOfficialUrl: "https://lin.ee/lOAwxR9",
   // 正式上線前，請將下方網址替換為 OA Plus 抽獎活動連結。
-  lineLotteryUrl: "https://liff.line.me/2002225335-xvLQ3eml/luckydraw/3mQm5bP7qvqgssCn",
+  lineLotteryUrl: "https://event.line.me/r/3mQm5bP7qvqgssCn/AWCeQx",
   sources: {
     longterm: {
       en: "Partner: Department of Senior and Long-term Care",
